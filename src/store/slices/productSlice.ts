@@ -1,22 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
 interface ProductState {
-  products: { id: string; name: string; price: number; stock: number }[];
+  products: { id: string; name: string; price: number; stock: number }[]
 }
 
 const initialState: ProductState = {
-  products: [],
-};
+  products: []
+}
 
 const productSlice = createSlice({
-  name: "product",
+  name: 'product',
   initialState,
   reducers: {
     setProducts: (state, action) => {
-      state.products = action.payload;
-    },
-  },
-});
+      state.products = action.payload
+    }
+  }
+})
 
-export const { setProducts } = productSlice.actions;
-export default productSlice.reducer;
+export const { setProducts } = productSlice.actions
+export default productSlice.reducer

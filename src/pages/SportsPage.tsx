@@ -1,5 +1,5 @@
 const SportsPage = () => {
-  return <div>SportsPage</div>;
-};
+  return <div>SportsPage</div>
+}
 
-export default SportsPage;
+export default SportsPage

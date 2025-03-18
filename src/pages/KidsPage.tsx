@@ -1,5 +1,5 @@
 const KidsPage = () => {
-  return <div>KidsPage</div>;
-};
+  return <div>KidsPage</div>
+}
 
-export default KidsPage;
+export default KidsPage

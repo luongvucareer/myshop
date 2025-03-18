@@ -1,28 +1,28 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
 interface AuthState {
-  isAuthPopupOpen: boolean;
-  isRegister: boolean;
+  isAuthPopupOpen: boolean
+  isRegister: boolean
 }
 
 const initialState: AuthState = {
   isAuthPopupOpen: false,
-  isRegister: false,
-};
+  isRegister: false
+}
 
 const authSlice = createSlice({
-  name: "auth",
+  name: 'auth',
   initialState,
   reducers: {
     openAuthPopup: (state, action) => {
-      state.isAuthPopupOpen = true;
-      state.isRegister = action.payload === "register";
+      state.isAuthPopupOpen = true
+      state.isRegister = action.payload === 'register'
     },
     closeAuthPopup: (state) => {
-      state.isAuthPopupOpen = false;
-    },
-  },
-});
+      state.isAuthPopupOpen = false
+    }
+  }
+})
 
-export const { openAuthPopup, closeAuthPopup } = authSlice.actions;
-export default authSlice.reducer;
+export const { openAuthPopup, closeAuthPopup } = authSlice.actions
+export default authSlice.reducer
