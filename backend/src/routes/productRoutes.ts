@@ -1,5 +1,6 @@
 import express from "express";
 import Product from "../models/Product";
+import { adminOnly, protect } from "../middleware/authMiddleware";
 
 const router = express.Router();
 
@@ -14,7 +15,7 @@ router.get("/", async (req, res) => {
 });
 
 // API để thêm sản phẩm mới
-router.post("/", async (req, res) => {
+router.post("/", protect, adminOnly, async (req, res) => {
   try {
     const { name, category, price, description, imageUrl, stock } = req.body;
     const product = new Product({
